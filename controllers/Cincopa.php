@@ -52,8 +52,12 @@ public function album_items() {
 		}else $fid = $json_api->query->fid;
 
 	$oReturn = new stdClass();
+	
+ 	if($json_api->query->format=='flv') $format = '';
+	elseif($json_api->query->format=='mp4') $format = '&content=d:mp4_hd';
+	else $format = '&content=d:original';
 	 
- $url = 'http://www.cincopa.com/media-platform/runtime/xspf.aspx?fid='.$fid; 
+ $url = 'http://www.cincopa.com/media-platform/runtime/xspf.aspx?fid='.$fid.$format; 
 
 $xml = simplexml_load_file($url);
 $namespaces = $xml->getNamespaces(true); // get namespaces

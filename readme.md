@@ -6,17 +6,17 @@ Tags: json api, RESTful Cincopa Easy Albums
 
 Contributors: parorrey
 
-Stable tag: 0.1
+Stable tag: 1.0
 
 Requires at least: 3.0.1
 
-Tested up to: 3.9.2
+Tested up to: 4.0
 
 License: GPLv2 or later
 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Extends the JSON API Plugin to allow Cincopa Easy Albums Listing for any user
+Extends the JSON API Plugin to allow RESTful Cincopa Easy Albums Listing for any user
 
 
 ==Description==
@@ -59,6 +59,16 @@ To install JSON API Cincopa just follow these steps:
 ==Changelog==
 
 
+= 1.1 =
+
+* Updated `album_items` making `original` uploaded format as default, `flv` and `mp4` are the possible values for format var.
+
+
+= 1.0 =
+
+* Updated `album_items` for original, flv and mp4 video formats availability
+
+
 = 0.1 =
 
 * Initial release.
@@ -78,9 +88,12 @@ http://localhost/api/cincopa/albums/?user_id=1
 
 = Method: album_items =
 
-It needs 'fid' var.
-
+It needs 'fid' var. 
 http://localhost/api/cincopa/album_items/?fid=AgCAn_Zvs6Zl
+
+To get video in flv format, http://localhost/api/cincopa/album_items/?fid=AgCAn_Zvs6Zl&format=flv
+
+To get video in transcoded mp4 720p version uploaded format, http://localhost/api/cincopa/album_items/?fid=AgCAn_Zvs6Zl&format=mp4
 
 
 For details, please check here: http://www.parorrey.com/solutions/json-api-cincopa/
