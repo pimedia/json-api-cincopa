@@ -6,11 +6,11 @@ Tags: json api, RESTful Cincopa Easy Albums
 
 Contributors: parorrey
 
-Stable tag: 1.0
+Stable tag: 1.3.1
 
 Requires at least: 3.0.1
 
-Tested up to: 4.0
+Tested up to: 4.1
 
 License: GPLv2 or later
 
@@ -57,6 +57,14 @@ To install JSON API Cincopa just follow these steps:
 
 
 ==Changelog==
+
+
+= 1.3.1 =
+
+* updated for wordpress 4.1 version
+= 1.2 =
+
+* updated for wordpress 4.0 version
 
 
 = 1.1 =
