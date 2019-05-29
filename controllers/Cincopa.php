@@ -5,7 +5,7 @@ Controller description: Cincopa Media RESTful Listing for any user
  Controller Author: Ali Qureshi
   Controller Author Twitter: @parorrey
   Controller Author Website: parorrey.com
-  8 Aug, 2014
+  2019-05-25
 */
 
 class JSON_API_Cincopa_Controller{
@@ -14,7 +14,7 @@ public function albums() {
    global $json_api, $wpdb;
    
     if (!$json_api->query->user_id) {
-			$json_api->error("You must include a 'user_id' var in your request.");
+			$json_api->error(__('You must include a "user_id" var in your request.', 'json-api-cincopa'));
 		}else $user_id = $json_api->query->user_id;
 
    if(!$json_api->query->sort) $order = ' ASC';
@@ -48,7 +48,7 @@ public function album_items() {
    global $json_api;
    
     if (!$json_api->query->fid) {
-			$json_api->error("You must include a 'fid' var in your request.");
+			$json_api->error(__('You must include a "fid" var in your request.', 'json-api-cincopa'));
 		}else $fid = $json_api->query->fid;
 
 	$oReturn = new stdClass();

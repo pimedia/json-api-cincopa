@@ -8,7 +8,7 @@
 
   Description: Extends the JSON API for RESTful BuddyPress Cincopa galleries listing for any user
 
-  Version: 1.7
+  Version: 1.9.3
   
   Author: Ali Qureshi
 
@@ -21,6 +21,12 @@
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 define('JSON_API_CINCOPA_HOME', dirname(__FILE__));
+
+
+function json_api_cincopa_load_plugin_textdomain() {
+    load_plugin_textdomain( 'json-api-cincopa', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+}
+add_action( 'plugins_loaded', 'json_api_cincopa_load_plugin_textdomain' );
 
 
 if (!is_plugin_active('json-api/json-api.php')) {
@@ -71,7 +77,6 @@ function pimJsonApiCincopaController($aControllers) {
     return $aControllers;
 
 }
-
 
 
 function setCincopaControllerPath($sDefaultPath) {
